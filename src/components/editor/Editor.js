@@ -2,8 +2,8 @@ import './editor.css';
 
 function Editor() {
   return(
-    <div>
-      <h1>Editor here</h1>
+    <div className='container'>
+      <h2 className='header'>Editor</h2>
     </div>
   )
 }
