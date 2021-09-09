@@ -2,8 +2,9 @@ import './preview.css';
 
 function Preview() {
   return(
-    <div className='container preview-container'>
-      <h2 className='header'>Preview</h2>
+    <div className='preview-container' id='preview'>
+      <h2 className='preview-header'>Preview</h2>
+      <p></p>
     </div>
   )
 }

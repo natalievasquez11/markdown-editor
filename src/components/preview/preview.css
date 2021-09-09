@@ -1,3 +1,12 @@
 .preview-container {
+  border: 1px solid black;
   width: 65%;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.preview-header {
+  border-bottom: 1px solid black;
+  margin-top: 0;
 }
