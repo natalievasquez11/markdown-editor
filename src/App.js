@@ -1,9 +1,12 @@
 import './App.css';
+import Editor from './components/editor/Editor.js';
+import Preview from './components/preview/Preview.js';
 
 function App() {
   return (
     <div className="App">
-      <h1>Is this thing working?</h1>
+      <Editor />
+      <Preview />
     </div>
   );
 }
