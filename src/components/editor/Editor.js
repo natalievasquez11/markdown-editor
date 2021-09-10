@@ -49,7 +49,9 @@ function Editor() {
   return(
     <div className='editor-container'>
       <h2 className='editor-header'>Editor</h2>
-      <textarea id='editor' type='text' placeholder={placeholder} />
+      <textarea id='editor' type='text' >
+        {placeholder}
+      </textarea>
     </div>
   )
 }
