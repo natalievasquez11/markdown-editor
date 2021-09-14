@@ -7,7 +7,7 @@ function Preview(props) {
   return(
     <div className='preview-container' id='preview'>
       <h2 className='preview-header'>Preview</h2>
-      <p dangerouslySetInnerHTML={{__html: markedText}} />
+      <p id='marked-text' dangerouslySetInnerHTML={{__html: markedText}} />
     </div>
   )
 }
