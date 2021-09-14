@@ -50,12 +50,12 @@ function App() {
   ![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
   `);
 
-  
+
 
   return (
     <div className="App">
       <Editor text={text}/>
-      <Preview setText={setText}/>
+      <Preview setText={setText} text={text}/>
     </div>
   );
 }

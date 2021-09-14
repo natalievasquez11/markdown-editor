@@ -1,10 +1,13 @@
+import marked from 'marked';
 import './preview.css';
 
-function Preview() {
+function Preview(props) {
+  let markedText = marked(props.text);
+
   return(
     <div className='preview-container' id='preview'>
       <h2 className='preview-header'>Preview</h2>
-      <p></p>
+      <p dangerouslySetInnerHTML={{__html: markedText}} />
     </div>
   )
 }
