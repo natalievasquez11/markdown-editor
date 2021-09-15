@@ -1,11 +1,12 @@
 import './editor.css';
 
-function Editor(props) {
+function Editor() {
 
   return(
     <div className='editor-container'>
       <h2 className='editor-header'>Editor</h2>
-      <textarea id='editor' type='text' value={props.text} 
+      <textarea id='editor' type='text' 
+      // value=''
       />
     </div>
   )
