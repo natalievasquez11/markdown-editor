@@ -51,7 +51,7 @@ const initialState = {
 function rootReducer(state = initialState, action) {
   switch(action.type) {
     case UPDATE_PREVIEW:
-      return [...state, action.payload]
+      return {...state, text: action.payload}
     default: 
       return state;
   }
