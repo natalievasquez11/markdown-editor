@@ -1,15 +1,19 @@
 import './editor.css';
+import { connect } from 'react-redux';
 
-function Editor() {
+const mapStateToProps = state => {
+  return { text: state.text }
+}
 
-  return(
+function Editor({ text }) {
+  return (
     <div className='editor-container'>
       <h2 className='editor-header'>Editor</h2>
       <textarea id='editor' type='text' 
-      //  value=
+      value={text}
       />
     </div>
   )
 }
 
-export default Editor;
+export default connect(mapStateToProps)(Editor);
