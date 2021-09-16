@@ -1,3 +1,5 @@
+import { UPDATE_PREVIEW } from "../constants/action-types";
+
 const initialState = {
   text: `# Welcome to my React Markdown Previewer!
 
@@ -42,12 +44,18 @@ const initialState = {
   1. And last but not least, let's not forget embedded images:
   
   ![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
-
+  
   `
 };
 
 function rootReducer(state = initialState, action) {
-  return state;
+  switch(action.type) {
+    case UPDATE_PREVIEW:
+      return [...state, action.payload]
+    default: 
+      return state;
+  }
 }
 
 export default rootReducer;
+
