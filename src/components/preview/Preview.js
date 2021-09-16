@@ -1,8 +1,13 @@
 import marked from 'marked';
 import './preview.css';
+import { connect } from 'react-redux';
 
-function Preview(props) {
-  let markedText = marked(' # Blah');
+const mapStateToProps = state => {
+  return { text: state.text }
+}
+
+function Preview({ text }) {
+  let markedText = marked(text);
 
   return(
     <div className='preview-container' id='preview'>
@@ -12,4 +17,4 @@ function Preview(props) {
   )
 }
 
-export default Preview;
+export default connect(mapStateToProps)(Preview);
