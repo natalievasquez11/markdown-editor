@@ -2,7 +2,7 @@ import marked from 'marked';
 import './preview.css';
 
 function Preview(props) {
-  let markedText = marked(props.text);
+  let markedText = marked(' # Blah');
 
   return(
     <div className='preview-container' id='preview'>
