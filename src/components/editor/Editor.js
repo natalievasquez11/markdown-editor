@@ -2,25 +2,24 @@ import './editor.css';
 import { connect } from 'react-redux';
 import { updatePreview } from '../../redux/actions/index';
 
-const mapStateToProps = state => {
-  return { text: state.text }
-}
+function Editor({ text, updatePreview }) {
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     updatePreview: text => dispatch(updatePreview(text));
-//   }
-// }
+  let handleTextUpdate = (e) => {
+    updatePreview(e.target.value);
+  }
 
-function Editor({ text }) {
   return (
     <div className='editor-container'>
       <h2 className='editor-header'>Editor</h2>
-      <textarea id='editor' type='text' 
-      value={text}
-      />
+      <textarea id='editor' type='text' value={text} onChange={handleTextUpdate} />
     </div>
   )
 }
 
-export default connect(mapStateToProps)(Editor);
+const mapStateToProps = state => {
+  return { text: state.text }
+}
+
+const mapDispatchToProps = { updatePreview }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Editor);
