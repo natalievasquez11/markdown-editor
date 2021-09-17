@@ -10,9 +10,9 @@ function Preview({ text }) {
   let markedText = marked(text);
 
   return(
-    <div className='preview-container' id='preview'>
+    <div className='preview-container' >
       <h2 className='preview-header'>Preview</h2>
-      <p id='marked-text' dangerouslySetInnerHTML={{__html: markedText}} />
+      <p id='preview' className='marked-text' dangerouslySetInnerHTML={{__html: markedText}} />
     </div>
   )
 }

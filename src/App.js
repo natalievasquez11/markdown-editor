@@ -1,4 +1,3 @@
-import react from 'react';
 import './App.css';
 import Editor from './components/editor/Editor.js';
 import Preview from './components/preview/Preview.js';
