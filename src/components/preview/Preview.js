@@ -7,12 +7,12 @@ const mapStateToProps = state => {
 }
 
 function Preview({ text }) {
-  let markedText = marked(text);
+  // let markedText = marked(text);
 
   return(
     <div className='preview-container' >
       <h2 className='preview-header'>Preview</h2>
-      <p id='preview' className='marked-text' dangerouslySetInnerHTML={{__html: markedText}} />
+      <p id='preview' className='marked-text' dangerouslySetInnerHTML={{__html: marked(text, { breaks: true })}} />
     </div>
   )
 }
